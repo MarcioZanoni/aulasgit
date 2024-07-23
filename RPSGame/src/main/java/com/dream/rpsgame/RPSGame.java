@@ -24,20 +24,25 @@ public class RPSGame {
         keyboard.nextLine();
         
         //Generate computer choice
-          /*int randomChoice = (int) (Math.random()*3);
+          int randomChoice = (int) (Math.random()*3);
           
-          if (randomChoice == 0){
-              computerChoice = rock;}
-          else if(randomChoice == 1) {
-              computerChoice == paper;}
-          else {
-              computerChoice = scissors;}
+        switch (randomChoice) {
+            case 0:
+                computerChoice = rock;
+                break;
+            case 1:
+                computerChoice = paper;
+                break;
+            default:
+                computerChoice = scissors;
+                break;
+        }
           System.out.println("Computer chose: " + computerChoice);
           }
-        */
+        
 }
 
-}
+
 
 
 
