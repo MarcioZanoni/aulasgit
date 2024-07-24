@@ -20,16 +20,17 @@ public class RPS {
         String paper = "paper";
         String scissors = "scissors";
         String computerChoice = null;
-        
+        String userChoice = null;
+        String result = null;
         //printing welcome game
         System.out.println("Welcome to Rock, Paper and scissors game");
         System.out.println("Choose: Rock, Paper or Scissors");
         
         // Data entry
         Scanner keyboard = new Scanner(System.in);
-        keyboard.nextLine();
+        userChoice = keyboard.nextLine();
         
-        //*Generate computer choice
+        //Generate computer choice
           int randomChoice = (int) (Math.random()*3);
           
         switch (randomChoice) {
@@ -38,7 +39,22 @@ public class RPS {
             case 2 -> computerChoice = scissors;
         }
           System.out.println("Computer chose: " + computerChoice);
+          
+          //Compare and get result
+        if(userChoice.equalsIgnoreCase(computerChoice)) {
+            result = "Draw";
+        }else if(userChoice.equalsIgnoreCase("Rock") && userChoice.equalsIgnoreCase("Scissors") ||
+                userChoice.equalsIgnoreCase("Paper") && userChoice.equalsIgnoreCase("Paper") ||
+                userChoice.equalsIgnoreCase("Scissors") && userChoice.equalsIgnoreCase("Rock")) 
+                { result = "User wins";} else {result = "Computer wins";}
+        
+          //Display the result
+                
+          System.out.println(result);         
+          
           }
+    
+    
             }
 
 
